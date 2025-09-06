@@ -1,0 +1,41 @@
+Section 1: Architecture Summary
+1. A user accesses the application through either a Thymeleaf-based dashboard (Admin or Doctor) or a REST client (mobile app, patient dashboard, or patient records).  
+
+2. The request is routed to the appropriate controller:
+   - Thymeleaf controllers handle server-rendered HTML views.  
+   - REST controllers handle JSON-based API requests.  
+
+3. The controller forwards the request to the service layer, which contains the main business logic.  
+
+4. The service layer applies business rules and coordinates workflows (e.g., checking doctor availability before creating an appointment).  
+
+5. The service layer interacts with the repository layer to perform database operations.  
+
+6. The repository layer uses:
+   - Spring Data JPA for MySQL to manage structured entities like patients, doctors, and appointments.  
+   - Spring Data MongoDB for document-based prescriptions.  
+
+7. Data retrieved from the databases is mapped into Java models:
+   - For Thymeleaf flows, models are passed to templates and rendered as dynamic HTML.  
+   - For REST flows, models (or DTOs) are serialized into JSON responses and returned to the client.  
+
+Section 2: Numbered Flow of Data and Control
+1. A user accesses the application through either a Thymeleaf-based dashboard (Admin or Doctor) or a REST client (mobile app, patient dashboard, or patient records).  
+
+2. The request is routed to the appropriate controller:
+   - Thymeleaf controllers handle server-rendered HTML views.  
+   - REST controllers handle JSON-based API requests.  
+
+3. The controller forwards the request to the service layer, which contains the main business logic.  
+
+4. The service layer applies business rules and coordinates workflows (e.g., checking doctor availability before creating an appointment).  
+
+5. The service layer interacts with the repository layer to perform database operations.  
+
+6. The repository layer uses:
+   - Spring Data JPA for MySQL to manage structured entities like patients, doctors, and appointments.  
+   - Spring Data MongoDB for document-based prescriptions.  
+
+7. Data retrieved from the databases is mapped into Java models:
+   - For Thymeleaf flows, models are passed to templates and rendered as dynamic HTML.  
+   - For REST flows, models (or DTOs) are serialized into JSON responses and returned to the client.  
